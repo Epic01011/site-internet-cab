@@ -32,7 +32,7 @@ const jsonLd = {
   name: 'Hayot Expertise',
   description: 'Cabinet d\'expertise comptable à Paris 8ème',
   url: 'https://hayot-expertise.fr',
-  telephone: '+33-1-XX-XX-XX-XX',
+  telephone: '+33-1-48-85-61-01',
   email: 'contact@hayot-expertise.fr',
   address: {
     '@type': 'PostalAddress',

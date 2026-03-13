@@ -35,11 +35,11 @@ export default function MentionsLegalesPage() {
             </h2>
             <div className="text-[#4a5568] space-y-2 text-sm leading-relaxed">
               <p><strong className="text-[#1a2e4c]">Raison sociale :</strong> Hayot Expertise</p>
-              <p><strong className="text-[#1a2e4c]">Forme juridique :</strong> Société d'exercice libéral à responsabilité limitée (SELARL)</p>
-              <p><strong className="text-[#1a2e4c]">Numéro SIRET :</strong> XXX XXX XXX XXXXX</p>
-              <p><strong className="text-[#1a2e4c]">Numéro TVA intracommunautaire :</strong> FR XX XXX XXX XXX</p>
+              <p><strong className="text-[#1a2e4c]">Forme juridique :</strong> Société par Actions Simplifiée (SAS)</p>
+              <p><strong className="text-[#1a2e4c]">Numéro SIRET :</strong> 942 525 098 00011</p>
+              <p><strong className="text-[#1a2e4c]">Numéro TVA intracommunautaire :</strong> FR86942525098</p>
               <p><strong className="text-[#1a2e4c]">Adresse du siège social :</strong> 58 rue de Monceau, 75008 Paris, France</p>
-              <p><strong className="text-[#1a2e4c]">Téléphone :</strong> 01 XX XX XX XX</p>
+              <p><strong className="text-[#1a2e4c]">Téléphone :</strong> 01 48 85 61 01</p>
               <p><strong className="text-[#1a2e4c]">Email :</strong> contact@hayot-expertise.fr</p>
               <p><strong className="text-[#1a2e4c]">Directeur de la publication :</strong> Samuel HAYOT, Expert-Comptable diplômé, membre de l'Ordre des Experts-Comptables d'Île-de-France</p>
             </div>

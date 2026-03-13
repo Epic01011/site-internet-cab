@@ -34,9 +34,9 @@ export default function Navigation() {
             </span>
           </div>
           <div className="flex items-center gap-4">
-            <a href="tel:+33100000000" className="flex items-center gap-1.5 hover:text-[#d4af37] transition-colors">
+            <a href="tel:+33148856101" className="flex items-center gap-1.5 hover:text-[#d4af37] transition-colors">
               <Phone className="w-3.5 h-3.5" />
-              01 XX XX XX XX
+              01 48 85 61 01
             </a>
             <Link href="/contact" className="bg-[#d4af37] text-[#1a2e4c] px-3 py-0.5 rounded text-xs font-semibold hover:bg-[#e8c95a] transition-colors">
               RDV Gratuit

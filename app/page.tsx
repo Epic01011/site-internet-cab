@@ -116,9 +116,9 @@ export default function HomePage() {
                   ))}
                 </div>
                 <div className="mt-6 pt-6 border-t border-white/20">
-                  <a href="tel:+33100000000" className="flex items-center gap-2 text-[#d4af37] font-medium hover:underline">
+                  <a href="tel:+33148856101" className="flex items-center gap-2 text-[#d4af37] font-medium hover:underline">
                     <Phone className="w-4 h-4" />
-                    01 XX XX XX XX
+                    01 48 85 61 01
                   </a>
                 </div>
               </div>
@@ -371,9 +371,9 @@ export default function HomePage() {
               </Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="border-[#1a2e4c] text-[#1a2e4c] hover:bg-[#1a2e4c] hover:text-white bg-transparent gap-2">
-              <a href="tel:+33100000000">
+              <a href="tel:+33148856101">
                 <Phone className="w-5 h-5" />
-                01 XX XX XX XX
+                01 48 85 61 01
               </a>
             </Button>
           </div>
