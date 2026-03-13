@@ -69,12 +69,12 @@ La holding immobilière permet de :
 - Préparer la transmission (donation parts)
 
 **Montage type :**
-```
+~~~
 Holding (IS)
   ├── SCI 1 (Location meublée)
   ├── SCI 2 (Location nue)
   └── SCI 3 (Résidence services)
-```
+~~~
 
 #### Marchand de Biens
 
@@ -393,6 +393,92 @@ Plus de 100 professionnels libéraux nous font confiance.
       { label: "Déclarations 2035/an", value: "80+" },
       { label: "Passages en société", value: "25+" },
       { label: "Économie fiscale moyenne", value: "6 500€/an" }
+    ]
+  },
+  {
+    slug: "restauration",
+    title: "Expert-Comptable Restauration & CHR Paris",
+    description: "Cabinet comptable spécialisé restauration, hôtellerie et CHR à Paris. TVA, caisse enregistreuse, saisonnalité, paie serveurs. Hayot Expertise Paris 8.",
+    content: `
+# Expert-Comptable Restauration & CHR Paris
+
+## Votre expert-comptable spécialisé dans la restauration
+
+Hayot Expertise maîtrise les **spécificités comptables et fiscales** du secteur CHR (Cafés, Hôtels, Restaurants). Nous accompagnons restaurateurs, traiteurs, food trucks et établissements hôteliers de Paris et Île-de-France.
+
+### Les enjeux spécifiques du secteur CHR
+
+#### TVA en restauration
+Le secteur restauration applique plusieurs taux de TVA :
+- **TVA 10%** : consommation sur place, plats à emporter (sauf boissons alcoolisées)
+- **TVA 20%** : boissons alcoolisées, confiseries, certains produits luxe
+- **TVA 5,5%** : produits alimentaires de base à emporter
+
+Notre cabinet sécurise votre gestion de TVA et optimise vos déclarations.
+
+#### Caisse enregistreuse et logiciels certifiés
+Depuis 2018, les restaurants doivent utiliser un **logiciel de caisse certifié NF 525**.
+Nous vérifions la conformité de votre système et gérons l'intégration comptable.
+
+#### Gestion de la saisonnalité
+- Anticipation des pics d'activité (Noël, été)
+- Gestion des stocks et pertes alimentaires
+- Planification de trésorerie
+
+### Nos services pour les restaurateurs
+
+#### Comptabilité & Fiscalité CHR
+- Tenue comptable adaptée aux CHR (stocks, caisse, TVA)
+- Bilan et compte de résultat annuel
+- Déclarations fiscales (IS, TVA, CFE)
+- Optimisation fiscale (amortissements matériel, travaux)
+
+#### Gestion de la paie en restauration
+- **Service (12,5%)** : calcul et répartition
+- Heures supplémentaires et majorations
+- Contrats saisonniers et extras
+- Avantages en nature (repas)
+- Convention collective HCR
+
+#### Création et reprise d'établissement
+- Choix du statut (SARL, SAS, EI)
+- Business plan et prévisionnel
+- Évaluation du fonds de commerce
+- **Bail commercial** : négociation et rédaction
+- Licence IV et autorisations d'exploitation
+
+### Indicateurs de performance CHR
+
+Nous suivons pour vous les KPIs essentiels :
+
+| Indicateur | Benchmark CHR |
+|-----------|---------------|
+| Food cost | 25-35% du CA |
+| Beverage cost | 15-25% du CA |
+| Labour cost | 30-40% du CA |
+| Résultat net | 5-15% du CA |
+
+### Accompagnement digital
+
+- Intégration des données de caisse automatiquement
+- Dashboard hebdomadaire en temps réel
+- Alerte en cas d'anomalie de caisse
+- Connexion avec les plateformes de livraison (Deliveroo, UberEats)
+
+**Cabinet référent CHR Paris 8ème**
+
+Notre équipe connaît les réalités du terrain : nous accompagnons des brasseries parisiennes, restaurants étoilés, food halls et établissements de nuit.
+
+📞 Audit comptable gratuit pour restaurateurs - 01 XX XX XX XX
+    `,
+    seoKeywords: ["expert-comptable restauration Paris", "comptable CHR", "TVA restauration", "comptable hôtellerie", "paie restauration", "comptable brasserie Paris"],
+    icon: "UtensilsCrossed",
+    relatedServices: ["expertise-comptable-paris-8", "social-paie-paris", "conseil-juridique-paris"],
+    stats: [
+      { label: "Établissements CHR", value: "40+" },
+      { label: "Taux de TVA gérés", value: "3" },
+      { label: "Bulletins de paie/mois", value: "200+" },
+      { label: "Saving moyen/an", value: "8 000€" }
     ]
   }
 ];

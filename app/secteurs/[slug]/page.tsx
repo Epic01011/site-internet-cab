@@ -2,7 +2,8 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { secteurs } from '@/data/secteurs';
 import { services } from '@/data/services';
-import ReactMarkdown from 'react-markdown';
+import MarkdownContent from '@/components/MarkdownContent';
+import Breadcrumb from '@/components/Breadcrumb';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import Link from 'next/link';
@@ -53,6 +54,13 @@ export default function SecteurPage({ params }: { params: { slug: string } }) {
     <div className="min-h-screen bg-white">
       <div className="bg-gradient-to-br from-[#1a2e4c] to-[#2a3e5c] text-white py-16">
         <div className="max-w-5xl mx-auto px-4">
+          <Breadcrumb
+            items={[
+              { label: 'Secteurs', href: '/secteurs/immobilier-sci-lmnp' },
+              { label: secteur.title },
+            ]}
+            className="text-white/70 mb-6"
+          />
           <div className="flex items-center gap-3 mb-6">
             <div className="p-4 bg-white/10 rounded-lg backdrop-blur-sm">
               <Icon className="w-10 h-10 text-white" />
@@ -110,43 +118,8 @@ export default function SecteurPage({ params }: { params: { slug: string } }) {
           </div>
         </div>
 
-        <div className="prose prose-lg max-w-none mb-16">
-          <ReactMarkdown
-            components={{
-              h1: ({ children }) => (
-                <h1 className="text-3xl font-bold text-[#1a2e4c] mt-8 mb-4 font-serif">{children}</h1>
-              ),
-              h2: ({ children }) => (
-                <h2 className="text-2xl font-bold text-[#1a2e4c] mt-8 mb-4 font-serif">{children}</h2>
-              ),
-              h3: ({ children }) => (
-                <h3 className="text-xl font-semibold text-[#1a2e4c] mt-6 mb-3">{children}</h3>
-              ),
-              h4: ({ children }) => (
-                <h4 className="text-lg font-semibold text-[#1a2e4c] mt-4 mb-2">{children}</h4>
-              ),
-              p: ({ children }) => (
-                <p className="text-[#4a5568] leading-relaxed mb-4">{children}</p>
-              ),
-              ul: ({ children }) => (
-                <ul className="list-disc list-inside space-y-2 mb-4 text-[#4a5568]">{children}</ul>
-              ),
-              li: ({ children }) => (
-                <li className="leading-relaxed">{children}</li>
-              ),
-              strong: ({ children }) => (
-                <strong className="font-semibold text-[#1a2e4c]">{children}</strong>
-              ),
-              code: ({ children }) => (
-                <code className="bg-[#f7fafc] px-2 py-1 rounded text-sm font-mono text-[#1a2e4c]">{children}</code>
-              ),
-              pre: ({ children }) => (
-                <pre className="bg-[#1a2e4c] text-white p-4 rounded-lg overflow-x-auto mb-4">{children}</pre>
-              ),
-            }}
-          >
-            {secteur.content}
-          </ReactMarkdown>
+        <div className="mb-16">
+          <MarkdownContent content={secteur.content} />
         </div>
 
         {relatedServicesList.length > 0 && (

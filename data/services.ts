@@ -151,6 +151,126 @@ Plus de 200 entreprises créées et accompagnées depuis 2015.
     relatedSecteurs: ["startups-tech", "professions-liberales"]
   },
   {
+    slug: "social-paie-paris",
+    title: "Gestion Sociale & Paie - Expert RH Paris",
+    category: "Social",
+    description: "Cabinet expert en gestion sociale et paie à Paris. Bulletins de paie, déclarations sociales, DSN, optimisation charges patronales. 58 rue de Monceau, 75008.",
+    content: `
+# Gestion Sociale & Paie - Cabinet Hayot Expertise Paris 8
+
+## Votre expert en gestion sociale à Paris
+
+Hayot Expertise prend en charge l'intégralité de votre **gestion sociale** : bulletins de paie, déclarations sociales, DSN mensuelle, et conseil en droit du travail.
+
+### Nos prestations sociales
+
+#### Établissement des bulletins de paie
+- Calcul des rémunérations et cotisations sociales
+- Gestion des avantages en nature
+- Traitement des heures supplémentaires et primes
+- Soldes de tout compte et documents de fin de contrat
+
+#### Déclarations sociales obligatoires
+- **DSN (Déclaration Sociale Nominative)** : transmission mensuelle automatisée
+- Déclaration DADS-U (remplacement)
+- Déclarations de charges sociales URSSAF, retraite, prévoyance
+- Gestion des arrêts maladie et accidents du travail
+
+#### Optimisation des charges sociales
+- Analyse des dispositifs d'exonération (Fillon, apprentissage, ZFU...)
+- Optimisation de la rémunération du dirigeant
+- Épargne salariale : intéressement, participation, PEE, PERCO
+- Mise en place de mutuelles et prévoyance avantageuses
+
+### Conseil en droit du travail
+
+Notre cabinet vous accompagne sur :
+- Rédaction de contrats de travail (CDI, CDD, alternance)
+- Procédures disciplinaires et licenciement
+- Négociation d'accords collectifs
+- Mise en conformité RGPD et protection des données RH
+
+### Outils digitaux RH
+
+Nous travaillons avec les meilleurs logiciels de paie :
+- **Silae / Payfit** : paie en ligne, accès portail employeur
+- **Tableau de bord RH** : suivi temps, absences, congés
+- **Coffre-fort numérique** : archivage sécurisé des bulletins
+
+### Tarification transparente
+
+| Taille | Nombre de bulletins | Tarif mensuel |
+|--------|---------------------|---------------|
+| TPE | 1 à 5 | 120-250€ HT |
+| PME | 6 à 20 | 40-60€/bulletin |
+| ETI | 20+ | Sur devis |
+
+📞 Audit social gratuit - Contactez-nous au 01 XX XX XX XX
+    `,
+    seoKeywords: ["gestion paie Paris", "cabinet paie Paris 8", "externalisation paie", "DSN Paris", "expert social Paris"],
+    icon: "Users",
+    relatedServices: ["expertise-comptable-paris-8", "creation-entreprise-paris"],
+    relatedSecteurs: ["startups-tech", "restauration", "professions-liberales"]
+  },
+  {
+    slug: "conseil-juridique-paris",
+    title: "Conseil Juridique & Droit des Affaires Paris",
+    category: "Juridique",
+    description: "Accompagnement juridique des entreprises à Paris 8. Rédaction de statuts, pactes d'associés, baux commerciaux, contrats. Cabinet Hayot Expertise.",
+    content: `
+# Conseil Juridique & Droit des Affaires - Paris 8ème
+
+## Votre partenaire juridique à Paris Monceau
+
+Hayot Expertise vous apporte un **conseil juridique opérationnel** pour sécuriser vos actes et décisions d'entreprise.
+
+### Droit des sociétés
+
+#### Création et structuration
+- Choix de la forme juridique optimale (SASU, EURL, SAS, SARL, SCI...)
+- Rédaction des statuts sur-mesure
+- Pactes d'associés : clauses de sortie, préemption, inaliénabilité
+- Cessions de parts et actions (valorisation + acte)
+
+#### Vie sociale de l'entreprise
+- Assemblées générales (convocation, procès-verbal)
+- Modifications statutaires (capital, siège, objet, gérance)
+- Augmentations et réductions de capital
+- Dissolution et liquidation amiable
+
+### Droit commercial
+
+- **Baux commerciaux** : négociation, rédaction, révision de loyer
+- **Contrats commerciaux** : CGV, CGU, contrats prestataires
+- **Propriété intellectuelle** : marques, licences, cession de droits
+- **Lettres de mission** et contrats de prestation
+
+### Restructurations & Transmission
+
+1. **Audit préalable** : analyse des risques juridiques et fiscaux
+2. **Structuration** : apport de titres, fusion, scission
+3. **Transmission familiale** : donation-partage, pacte Dutreil
+4. **Cession d'entreprise** : protocole, garantie d'actif et de passif
+
+### Contentieux & Précontentieux
+
+- Mise en demeure et recouvrement
+- Médiation commerciale
+- Rédaction de conclusions (en liaison avec votre avocat)
+- Gestion des procédures collectives (sauvegarde, redressement)
+
+**Cabinet juridique pluridisciplinaire à Paris 8**
+
+Notre expertise couvre comptabilité, fiscalité ET juridique — un interlocuteur unique pour toutes vos problématiques d'entreprise.
+
+📞 Consultation juridique - 58 rue de Monceau, 75008 Paris
+    `,
+    seoKeywords: ["conseil juridique Paris 8", "droit des affaires Paris", "statuts société Paris", "pacte associés", "bail commercial Paris"],
+    icon: "Scale",
+    relatedServices: ["creation-entreprise-paris", "fiscalite-holding-paris", "expertise-comptable-paris-8"],
+    relatedSecteurs: ["startups-tech", "immobilier-sci-lmnp"]
+  },
+  {
     slug: "comptabilite-lmnp-paris",
     title: "Comptabilité LMNP - Location Meublée",
     category: "Immobilier",

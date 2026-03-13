@@ -123,10 +123,10 @@ export const blogPosts: BlogPost[] = [
 
 Pour les entrepreneurs avisés, la **holding SASU** offre le meilleur des deux mondes :
 
-```
+~~~
 Holding SASU (IS)
   └── Filiale opérationnelle (SASU ou EURL)
-```
+~~~
 
 **Avantages :**
 - Dividendes de la filiale → Holding : exonération 95% (régime mère-fille)
@@ -220,7 +220,7 @@ Si la holding détient **95%+ du capital** de ses filiales :
 - **Report des déficits** du groupe
 
 **Exemple :**
-```
+~~~
 Holding (intégration fiscale)
   ├── Filiale A : +80 000€
   ├── Filiale B : -30 000€
@@ -228,7 +228,7 @@ Holding (intégration fiscale)
 
 Résultat consolidé : +100 000€ (au lieu de 130k€)
 Économie IS : 7 500€
-```
+~~~
 
 ### 3. Financement d'acquisitions
 
@@ -278,12 +278,12 @@ Stratégie holding + filiale opérationnelle :
 ### Holding immobilière
 
 **Structure type :**
-```
+~~~
 Holding SASU (IS)
   ├── SCI 1 : Immeuble Paris (LMNP)
   ├── SCI 2 : Appartement Lyon (Location nue)
   └── SCI 3 : Résidence services (LMNP)
-```
+~~~
 
 **Avantages :**
 - Optimisation dividendes SCI
@@ -294,12 +294,12 @@ Holding SASU (IS)
 ### Holding pour consultant
 
 **Consultant avec plusieurs activités :**
-```
+~~~
 Holding
   ├── SASU Consulting
   ├── SASU Formation
   └── SARL Édition logiciel
-```
+~~~
 
 **Avantages :**
 - Mutualisation trésorerie
@@ -507,10 +507,10 @@ En tant que dirigeant de société, vous avez le choix entre **rémunération (s
 ### Holding + Filiale opérationnelle
 
 **Structure :**
-```
+~~~
 Holding SASU
   └── Filiale SASU (opérationnelle)
-```
+~~~
 
 **Stratégie :**
 1. Filiale : Salaire minimal au dirigeant
@@ -603,6 +603,189 @@ Nous optimisons votre stratégie de rémunération en tenant compte de :
     seoKeywords: ["dividendes vs salaire", "optimisation rémunération", "SASU dividendes", "flat tax", "charges sociales dividendes"],
     relatedPosts: ["sasu-vs-eurl-2026", "holding-optimisation-fiscale-2026"],
     relatedServices: ["expertise-comptable-paris-8", "fiscalite-holding-paris"]
+  },
+  {
+    slug: "actualites-fiscales-2026",
+    title: "Actualités Fiscales 2026 : Ce qui change pour les entreprises",
+    category: "Actualités",
+    excerpt: "Budget 2026, nouvelles obligations DSN, réforme de la TVA, cotisation foncière : tour d'horizon complet des changements fiscaux et sociaux à connaître.",
+    author: "Samuel HAYOT",
+    publishedDate: "2026-02-01",
+    content: `
+# Actualités Fiscales 2026 : Ce qui change pour les entreprises
+
+**Mis à jour en février 2026** - Le budget 2026 apporte plusieurs modifications importantes pour les entrepreneurs et TPE/PME. Voici notre synthèse des principaux changements à anticiper.
+
+## 1. IS - Impôt sur les Sociétés
+
+### Taux réduit étendu
+Le taux réduit de 15% (applicable sur les 42 500 premiers euros de bénéfice) est maintenu pour les PME dont le CA est inférieur à 10 millions d'euros. Pas de changement majeur sur ce point.
+
+### Amortissement des véhicules électriques
+La déductibilité des amortissements pour les véhicules électriques est renforcée : le plafond passe à 40 000€ (vs 30 000€ précédemment) pour les véhicules mis en service en 2026.
+
+## 2. TVA - Nouveautés 2026
+
+### Franchise en base
+Le seuil de franchise en base de TVA reste fixé à :
+- **Activités de services** : 36 800€ de CA
+- **Livraisons de biens** : 91 900€ de CA
+
+### TVA sur les services numériques
+Renforcement des obligations déclaratives pour les plateformes numériques (marketplaces). Impact sur les auto-entrepreneurs qui vendent via Amazon, Etsy ou Leboncoin.
+
+## 3. Social - DSN et URSSAF
+
+### Nouvelles règles DSN
+La **Déclaration Sociale Nominative (DSN)** évolue avec de nouveaux codes motifs pour les arrêts maladie et les congés paternité. Mise à jour obligatoire des logiciels de paie avant le 1er mars 2026.
+
+### Revalorisation du SMIC
+Le SMIC est revalorisé au 1er janvier 2026. Impact direct sur :
+- Les bulletins de paie (attention aux minima conventionnels)
+- Les calculs de réduction Fillon
+- Les seuils de participation et d'intéressement
+
+### Cotisations retraite
+Hausse progressive des cotisations retraite complémentaire AGIRC-ARRCO de 0,1 point sur la tranche T2. Anticipez l'impact sur votre masse salariale.
+
+## 4. CFE - Cotisation Foncière des Entreprises
+
+La CFE 2026 est calculée sur la base des valeurs locatives 2025. Rappel : les entreprises réalisant moins de 5 000€ de CA en N-1 bénéficient d'une exonération automatique.
+
+**Conseil Hayot Expertise** : certaines communes ont voté des augmentations de taux de CFE jusqu'à +5%. Vérifiez votre avis de CFE dès réception.
+
+## 5. Obligations nouvelles pour les TPE/PME
+
+### Facturation électronique - Report
+Le déploiement de la **facturation électronique obligatoire** est progressivement reporté :
+- Grandes entreprises : déjà applicable
+- ETI : 1er septembre 2026
+- PME et TPE : 1er septembre 2027
+
+Anticipez dès maintenant l'adoption d'un logiciel compatible (Chorus Pro, Pennylane, etc.).
+
+### Accès au compte fiscal simplifié
+L'espace professionnel impots.gouv.fr propose de nouvelles fonctionnalités : visualisation de l'ensemble des paiements, adhésion au prélèvement à la source pour les acomptes IS.
+
+## Ce que vous devez faire en 2026
+
+1. Mettre à jour votre logiciel de paie (DSN)
+2. Vérifier votre avis CFE et les possibilités de dégrèvement
+3. Anticiper la facturation électronique
+4. Optimiser les amortissements de véhicules électriques si applicable
+5. Revoir votre stratégie de rémunération (SMIC, minima)
+
+**Notre équipe reste disponible** pour toute question sur ces évolutions. N'hésitez pas à nous contacter pour un point sur l'impact de ces mesures sur votre situation.
+
+📞 01 XX XX XX XX | contact@hayot-expertise.fr
+    `,
+    seoKeywords: ["actualités fiscales 2026", "budget 2026 entreprises", "IS 2026", "TVA 2026", "DSN 2026", "CFE 2026"],
+    relatedPosts: ["sasu-vs-eurl-2026", "dividendes-vs-salaire-2026"],
+    relatedServices: ["expertise-comptable-paris-8", "social-paie-paris"]
+  },
+  {
+    slug: "sci-is-ou-ir-2026",
+    title: "SCI : IS ou IR, quel régime fiscal choisir en 2026 ?",
+    category: "Immobilier",
+    excerpt: "SCI à l'IS ou à l'IR ? Analyse complète des avantages et inconvénients selon votre profil investisseur. Optimisation fiscale immobilière 2026.",
+    author: "Samuel HAYOT",
+    publishedDate: "2026-01-28",
+    content: `
+# SCI : IS ou IR, quel régime fiscal choisir en 2026 ?
+
+**Mise à jour janvier 2026** - La Société Civile Immobilière (SCI) est l'outil de référence pour la gestion et la transmission d'un patrimoine immobilier. Mais faut-il opter pour l'IS ou rester à l'IR ? Ce guide détaille les deux options.
+
+## SCI à l'IR : le régime de droit commun
+
+Par défaut, une SCI est **transparente fiscalement** : les revenus sont imposés directement entre les mains des associés à hauteur de leurs parts.
+
+### Imposition des revenus fonciers
+
+Les loyers perçus via une SCI à l'IR sont déclarés en **revenus fonciers** :
+- Abattement de 30% si micro-foncier (revenus < 15 000€)
+- Régime réel : déduction des charges réelles (travaux, intérêts, assurance, gestion)
+
+### Avantages de la SCI à l'IR
+
+✅ **Plus-value immobilière** : régime des particuliers avec abattements pour durée de détention (exonération totale après 30 ans)
+✅ **Simplicité** : pas de comptabilité commerciale obligatoire
+✅ **Déficit foncier** : imputable sur le revenu global jusqu'à 10 700€/an
+✅ **Idéal** pour la transmission et le démembrement de propriété
+
+### Inconvénients de la SCI à l'IR
+
+❌ Imposition au TMI (parfois 41% ou 45% + 17,2% de PS)
+❌ Impossible d'amortir le bien immobilier
+❌ Déficit imputable limité à 10 700€/an (le reste est reporté)
+
+## SCI à l'IS : l'option fiscale
+
+L'option pour l'IS transforme la SCI en entité fiscalement opaque, imposée comme une société commerciale.
+
+### Imposition des bénéfices IS
+
+- **Taux réduit 15%** sur les 42 500 premiers euros de bénéfice
+- **Taux normal 25%** au-delà
+
+### Le grand avantage : l'amortissement
+
+À l'IS, la SCI peut **amortir le bien immobilier** (hors terrain) :
+- Durée d'amortissement : 20 à 40 ans selon la nature du bien
+- Résultat fiscal souvent nul ou très faible
+- **Exemple** : Immeuble à 500 000€ → amortissement de 12 500€/an sur 40 ans
+
+### Avantages de la SCI à l'IS
+
+✅ **Amortissement** : économie fiscale significative
+✅ **Taux d'IS réduit** (15% jusqu'à 42 500€)
+✅ **Déductibilité totale** des charges (intérêts, gestion, travaux)
+✅ **Idéal** pour la LMNP (location meublée) en SCI IS
+
+### Inconvénients de la SCI à l'IS
+
+❌ **Plus-value professionnelle** à la revente (pas d'abattement pour durée)
+❌ **Double imposition** des dividendes (IS + flat tax 30%)
+❌ Comptabilité commerciale obligatoire (expert-comptable recommandé)
+❌ **Irréversible** : une fois l'option IS prise, difficile de revenir à l'IR
+
+## Tableau comparatif SCI IS vs IR
+
+| Critère | SCI à l'IR | SCI à l'IS |
+|---------|------------|------------|
+| Amortissement | ❌ | ✅ |
+| Plus-value revente | Régime particuliers | Régime professionnel |
+| TMI associés | Oui | Non (IS direct) |
+| Transmission | ✅ Très favorable | ⚠️ Complexe |
+| Location meublée | ❌ Impossible | ✅ Possible |
+| Taux d'imposition | TMI + 17,2% PS | 15-25% IS |
+
+## Notre recommandation 2026
+
+**SCI à l'IR** est préférable si :
+- Vous anticipez une revente à moyen terme (< 15 ans)
+- Votre objectif est la transmission familiale
+- Vous avez un TMI faible (< 30%)
+
+**SCI à l'IS** est préférable si :
+- Vous faites de la location meublée (LMNP)
+- Votre TMI est élevé (> 30%)
+- Vous détenez l'immeuble sur très long terme
+- Vous souhaitez intégrer la SCI dans une holding
+
+## L'option holding + SCI IS : le montage optimal
+
+Pour les investisseurs avec plusieurs biens, le montage **Holding IS → SCI IS** permet :
+1. Remonter les dividendes de la SCI à la holding (régime mère-fille : 95% exonérés)
+2. Réinvestir les bénéfices dans de nouveaux actifs sans imposition immédiate
+3. Optimiser la transmission patrimoniale
+
+**Conseil de notre cabinet** : chaque situation est unique. Un bilan patrimonial gratuit vous permettra de déterminer le régime optimal pour vos investissements immobiliers.
+
+📞 Contactez notre expert LMNP/SCI : 01 XX XX XX XX
+    `,
+    seoKeywords: ["SCI IS ou IR", "SCI impôt sur les sociétés", "fiscalité SCI", "amortissement SCI IS", "holding SCI", "expert-comptable SCI Paris"],
+    relatedPosts: ["holding-optimisation-fiscale-2026", "dividendes-vs-salaire-2026"],
+    relatedServices: ["comptabilite-lmnp-paris", "fiscalite-holding-paris", "expertise-comptable-paris-8"]
   }
 ];
 
