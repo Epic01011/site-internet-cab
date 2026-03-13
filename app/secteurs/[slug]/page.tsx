@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { secteurs } from '@/data/secteurs';
 import { services } from '@/data/services';
 import MarkdownContent from '@/components/MarkdownContent';
+import Breadcrumb from '@/components/Breadcrumb';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import Link from 'next/link';
@@ -53,6 +54,13 @@ export default function SecteurPage({ params }: { params: { slug: string } }) {
     <div className="min-h-screen bg-white">
       <div className="bg-gradient-to-br from-[#1a2e4c] to-[#2a3e5c] text-white py-16">
         <div className="max-w-5xl mx-auto px-4">
+          <Breadcrumb
+            items={[
+              { label: 'Secteurs', href: '/secteurs/immobilier-sci-lmnp' },
+              { label: secteur.title },
+            ]}
+            className="text-white/70 mb-6"
+          />
           <div className="flex items-center gap-3 mb-6">
             <div className="p-4 bg-white/10 rounded-lg backdrop-blur-sm">
               <Icon className="w-10 h-10 text-white" />

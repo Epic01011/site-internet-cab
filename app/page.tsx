@@ -300,6 +300,60 @@ export default function HomePage() {
         </section>
       )}
 
+      {/* ── TESTIMONIALS ─────────────────────────────── */}
+      <section className="bg-[#f7fafc] py-20">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <span className="text-sm font-semibold text-[#d4af37] uppercase tracking-wider">Témoignages</span>
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#1a2e4c] mt-2 mb-4">
+              Ce que disent nos clients
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                name: 'Marie L.',
+                role: 'Directrice, Startup SaaS Paris',
+                quote: 'Hayot Expertise a transformé notre gestion comptable. Réactifs, disponibles, et leurs conseils fiscaux nous ont fait économiser plus de 15 000€ la première année.',
+                stars: 5,
+              },
+              {
+                name: 'Thomas R.',
+                role: 'Investisseur LMNP, Paris 17ème',
+                quote: "Samuel HAYOT maîtrise parfaitement la fiscalité immobilière. Grâce au passage au régime réel avec amortissements, mon résultat fiscal est quasi nul sur mon portefeuille de 3 biens.",
+                stars: 5,
+              },
+              {
+                name: 'Dr. Sophie M.',
+                role: 'Médecin libéral, Paris 8ème',
+                quote: "En tant que médecin, je cherchais un cabinet qui comprenne les spécificités BNC. Hayot Expertise est un vrai partenaire : ils m'ont accompagnée dans le passage en SELARL avec une économie fiscale significative.",
+                stars: 5,
+              },
+            ].map((testimonial) => (
+              <blockquote key={testimonial.name} className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 flex flex-col">
+                <div className="flex mb-4">
+                  {Array.from({ length: testimonial.stars }).map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-[#d4af37] text-[#d4af37]" />
+                  ))}
+                </div>
+                <p className="text-[#4a5568] leading-relaxed italic flex-1 mb-6">
+                  &ldquo;{testimonial.quote}&rdquo;
+                </p>
+                <footer className="flex items-center gap-3 mt-auto">
+                  <div className="w-10 h-10 bg-[#1a2e4c] rounded-full flex items-center justify-center text-white font-bold text-sm shrink-0">
+                    {testimonial.name[0]}
+                  </div>
+                  <div>
+                    <div className="font-semibold text-[#1a2e4c] text-sm">{testimonial.name}</div>
+                    <div className="text-xs text-[#4a5568]">{testimonial.role}</div>
+                  </div>
+                </footer>
+              </blockquote>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── CTA FINAL ────────────────────────────────── */}
       <section className="bg-gradient-to-r from-[#d4af37] to-[#b8952e] py-20">
         <div className="max-w-4xl mx-auto px-4 text-center">

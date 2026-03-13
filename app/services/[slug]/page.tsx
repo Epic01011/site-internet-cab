@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { services } from '@/data/services';
 import { secteurs } from '@/data/secteurs';
 import MarkdownContent from '@/components/MarkdownContent';
+import Breadcrumb from '@/components/Breadcrumb';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import Link from 'next/link';
@@ -56,6 +57,13 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
   return (
     <div className="min-h-screen bg-white">
       <article className="max-w-5xl mx-auto px-4 py-16">
+        <Breadcrumb
+          items={[
+            { label: 'Services', href: '/services/expertise-comptable-paris-8' },
+            { label: service.title },
+          ]}
+          className="text-[#4a5568] mb-8"
+        />
         <div className="mb-8">
           <div className="flex items-center gap-3 mb-4">
             <div className="p-3 bg-[#1a2e4c]/10 rounded-lg">

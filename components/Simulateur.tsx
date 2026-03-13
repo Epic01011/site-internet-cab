@@ -17,16 +17,16 @@ interface DivSimResult {
   economie: number;
 }
 
-function simulerDividendes(revenueTotal: number, partDividendes: number): DivSimResult {
-  const partSalaire = revenueTotal - partDividendes;
+function simulerDividendes(revenuTotal: number, partDividendes: number): DivSimResult {
+  const partSalaire = revenuTotal - partDividendes;
   const chargesSociales = partSalaire * 0.82;
   const salaireNet = partSalaire - chargesSociales;
   const flatTax = partDividendes * 0.3;
   const dividendeNet = partDividendes - flatTax;
   const totalSASU = salaireNet + dividendeNet;
 
-  const chargesEURL = revenueTotal * 0.45;
-  const totalEURL = revenueTotal - chargesEURL;
+  const chargesEURL = revenuTotal * 0.45;
+  const totalEURL = revenuTotal - chargesEURL;
 
   return {
     salaireNet: Math.round(salaireNet),

@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { blogPosts } from '@/data/blog';
 import { services } from '@/data/services';
 import MarkdownContent from '@/components/MarkdownContent';
+import Breadcrumb from '@/components/Breadcrumb';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import Link from 'next/link';
@@ -57,6 +58,14 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
   return (
     <div className="min-h-screen bg-white">
       <article className="max-w-4xl mx-auto px-4 py-16">
+        <Breadcrumb
+          items={[
+            { label: 'Blog', href: '/blog' },
+            { label: post.category, href: `/blog/category/${encodeURIComponent(post.category.toLowerCase())}` },
+            { label: post.title },
+          ]}
+          className="text-[#4a5568] mb-8"
+        />
         <div className="mb-8">
           <div className="flex items-center gap-3 mb-4">
             <span className="px-3 py-1 bg-[#d4af37]/10 text-[#d4af37] text-sm font-medium rounded-full">
