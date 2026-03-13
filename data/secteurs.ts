@@ -69,12 +69,12 @@ La holding immobilière permet de :
 - Préparer la transmission (donation parts)
 
 **Montage type :**
-```
+~~~
 Holding (IS)
   ├── SCI 1 (Location meublée)
   ├── SCI 2 (Location nue)
   └── SCI 3 (Résidence services)
-```
+~~~
 
 #### Marchand de Biens
 

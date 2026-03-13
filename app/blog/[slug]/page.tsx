@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { blogPosts } from '@/data/blog';
 import { services } from '@/data/services';
-import ReactMarkdown from 'react-markdown';
+import MarkdownContent from '@/components/MarkdownContent';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import Link from 'next/link';
@@ -88,68 +88,8 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
           </p>
         </div>
 
-        <div className="prose prose-lg max-w-none mb-16">
-          <ReactMarkdown
-            components={{
-              h1: ({ children }) => (
-                <h1 className="text-3xl font-bold text-[#1a2e4c] mt-8 mb-4 font-serif">{children}</h1>
-              ),
-              h2: ({ children }) => (
-                <h2 className="text-2xl font-bold text-[#1a2e4c] mt-8 mb-4 font-serif">{children}</h2>
-              ),
-              h3: ({ children }) => (
-                <h3 className="text-xl font-semibold text-[#1a2e4c] mt-6 mb-3">{children}</h3>
-              ),
-              h4: ({ children }) => (
-                <h4 className="text-lg font-semibold text-[#1a2e4c] mt-4 mb-2">{children}</h4>
-              ),
-              p: ({ children }) => (
-                <p className="text-[#4a5568] leading-relaxed mb-4">{children}</p>
-              ),
-              ul: ({ children }) => (
-                <ul className="list-disc list-inside space-y-2 mb-4 text-[#4a5568]">{children}</ul>
-              ),
-              ol: ({ children }) => (
-                <ol className="list-decimal list-inside space-y-2 mb-4 text-[#4a5568]">{children}</ol>
-              ),
-              li: ({ children }) => (
-                <li className="leading-relaxed">{children}</li>
-              ),
-              strong: ({ children }) => (
-                <strong className="font-semibold text-[#1a2e4c]">{children}</strong>
-              ),
-              a: ({ href, children }) => (
-                <a href={href} className="text-[#d4af37] hover:underline">{children}</a>
-              ),
-              blockquote: ({ children }) => (
-                <blockquote className="border-l-4 border-[#d4af37] pl-4 italic text-[#4a5568] my-4">
-                  {children}
-                </blockquote>
-              ),
-              table: ({ children }) => (
-                <div className="overflow-x-auto my-6">
-                  <table className="min-w-full border-collapse border border-[#e2e8f0]">{children}</table>
-                </div>
-              ),
-              thead: ({ children }) => (
-                <thead className="bg-[#1a2e4c] text-white">{children}</thead>
-              ),
-              th: ({ children }) => (
-                <th className="border border-[#e2e8f0] px-4 py-3 text-left font-semibold">{children}</th>
-              ),
-              td: ({ children }) => (
-                <td className="border border-[#e2e8f0] px-4 py-3 text-[#4a5568]">{children}</td>
-              ),
-              code: ({ children }) => (
-                <code className="bg-[#f7fafc] px-2 py-1 rounded text-sm font-mono text-[#1a2e4c]">{children}</code>
-              ),
-              pre: ({ children }) => (
-                <pre className="bg-[#1a2e4c] text-white p-4 rounded-lg overflow-x-auto mb-4 text-sm">{children}</pre>
-              ),
-            }}
-          >
-            {post.content}
-          </ReactMarkdown>
+        <div className="mb-16">
+          <MarkdownContent content={post.content} />
         </div>
 
         <div className="bg-gradient-to-r from-[#1a2e4c] to-[#2a3e5c] text-white p-8 rounded-xl mb-12 shadow-lg">

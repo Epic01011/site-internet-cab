@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { services } from '@/data/services';
 import { secteurs } from '@/data/secteurs';
-import ReactMarkdown from 'react-markdown';
+import MarkdownContent from '@/components/MarkdownContent';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import Link from 'next/link';
@@ -96,45 +96,8 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
           </div>
         </div>
 
-        <div className="prose prose-lg max-w-none mb-16">
-          <ReactMarkdown
-            components={{
-              h1: ({ children }) => (
-                <h1 className="text-3xl font-bold text-[#1a2e4c] mt-8 mb-4 font-serif">{children}</h1>
-              ),
-              h2: ({ children }) => (
-                <h2 className="text-2xl font-bold text-[#1a2e4c] mt-8 mb-4 font-serif">{children}</h2>
-              ),
-              h3: ({ children }) => (
-                <h3 className="text-xl font-semibold text-[#1a2e4c] mt-6 mb-3">{children}</h3>
-              ),
-              p: ({ children }) => (
-                <p className="text-[#4a5568] leading-relaxed mb-4">{children}</p>
-              ),
-              ul: ({ children }) => (
-                <ul className="list-disc list-inside space-y-2 mb-4 text-[#4a5568]">{children}</ul>
-              ),
-              li: ({ children }) => (
-                <li className="leading-relaxed">{children}</li>
-              ),
-              strong: ({ children }) => (
-                <strong className="font-semibold text-[#1a2e4c]">{children}</strong>
-              ),
-              table: ({ children }) => (
-                <div className="overflow-x-auto my-6">
-                  <table className="min-w-full border-collapse border border-[#e2e8f0]">{children}</table>
-                </div>
-              ),
-              th: ({ children }) => (
-                <th className="border border-[#e2e8f0] bg-[#f7fafc] px-4 py-2 text-left font-semibold text-[#1a2e4c]">{children}</th>
-              ),
-              td: ({ children }) => (
-                <td className="border border-[#e2e8f0] px-4 py-2 text-[#4a5568]">{children}</td>
-              ),
-            }}
-          >
-            {service.content}
-          </ReactMarkdown>
+        <div className="mb-16">
+          <MarkdownContent content={service.content} />
         </div>
 
         {(relatedServicesList.length > 0 || relatedSecteursList.length > 0) && (

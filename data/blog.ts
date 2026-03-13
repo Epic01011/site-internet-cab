@@ -123,10 +123,10 @@ export const blogPosts: BlogPost[] = [
 
 Pour les entrepreneurs avisés, la **holding SASU** offre le meilleur des deux mondes :
 
-```
+~~~
 Holding SASU (IS)
   └── Filiale opérationnelle (SASU ou EURL)
-```
+~~~
 
 **Avantages :**
 - Dividendes de la filiale → Holding : exonération 95% (régime mère-fille)
@@ -220,7 +220,7 @@ Si la holding détient **95%+ du capital** de ses filiales :
 - **Report des déficits** du groupe
 
 **Exemple :**
-```
+~~~
 Holding (intégration fiscale)
   ├── Filiale A : +80 000€
   ├── Filiale B : -30 000€
@@ -228,7 +228,7 @@ Holding (intégration fiscale)
 
 Résultat consolidé : +100 000€ (au lieu de 130k€)
 Économie IS : 7 500€
-```
+~~~
 
 ### 3. Financement d'acquisitions
 
@@ -278,12 +278,12 @@ Stratégie holding + filiale opérationnelle :
 ### Holding immobilière
 
 **Structure type :**
-```
+~~~
 Holding SASU (IS)
   ├── SCI 1 : Immeuble Paris (LMNP)
   ├── SCI 2 : Appartement Lyon (Location nue)
   └── SCI 3 : Résidence services (LMNP)
-```
+~~~
 
 **Avantages :**
 - Optimisation dividendes SCI
@@ -294,12 +294,12 @@ Holding SASU (IS)
 ### Holding pour consultant
 
 **Consultant avec plusieurs activités :**
-```
+~~~
 Holding
   ├── SASU Consulting
   ├── SASU Formation
   └── SARL Édition logiciel
-```
+~~~
 
 **Avantages :**
 - Mutualisation trésorerie
@@ -507,10 +507,10 @@ En tant que dirigeant de société, vous avez le choix entre **rémunération (s
 ### Holding + Filiale opérationnelle
 
 **Structure :**
-```
+~~~
 Holding SASU
   └── Filiale SASU (opérationnelle)
-```
+~~~
 
 **Stratégie :**
 1. Filiale : Salaire minimal au dirigeant
