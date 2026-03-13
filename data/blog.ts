@@ -677,7 +677,7 @@ L'espace professionnel impots.gouv.fr propose de nouvelles fonctionnalités : vi
 
 **Notre équipe reste disponible** pour toute question sur ces évolutions. N'hésitez pas à nous contacter pour un point sur l'impact de ces mesures sur votre situation.
 
-📞 01 XX XX XX XX | contact@hayot-expertise.fr
+📞 01 48 85 61 01 | contact@hayot-expertise.fr
     `,
     seoKeywords: ["actualités fiscales 2026", "budget 2026 entreprises", "IS 2026", "TVA 2026", "DSN 2026", "CFE 2026"],
     relatedPosts: ["sasu-vs-eurl-2026", "dividendes-vs-salaire-2026"],
@@ -781,7 +781,7 @@ Pour les investisseurs avec plusieurs biens, le montage **Holding IS → SCI IS*
 
 **Conseil de notre cabinet** : chaque situation est unique. Un bilan patrimonial gratuit vous permettra de déterminer le régime optimal pour vos investissements immobiliers.
 
-📞 Contactez notre expert LMNP/SCI : 01 XX XX XX XX
+📞 Contactez notre expert LMNP/SCI : 01 48 85 61 01
     `,
     seoKeywords: ["SCI IS ou IR", "SCI impôt sur les sociétés", "fiscalité SCI", "amortissement SCI IS", "holding SCI", "expert-comptable SCI Paris"],
     relatedPosts: ["holding-optimisation-fiscale-2026", "dividendes-vs-salaire-2026"],

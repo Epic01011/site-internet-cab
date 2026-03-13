@@ -469,7 +469,7 @@ Nous suivons pour vous les KPIs essentiels :
 
 Notre équipe connaît les réalités du terrain : nous accompagnons des brasseries parisiennes, restaurants étoilés, food halls et établissements de nuit.
 
-📞 Audit comptable gratuit pour restaurateurs - 01 XX XX XX XX
+📞 Audit comptable gratuit pour restaurateurs - 01 48 85 61 01
     `,
     seoKeywords: ["expert-comptable restauration Paris", "comptable CHR", "TVA restauration", "comptable hôtellerie", "paie restauration", "comptable brasserie Paris"],
     icon: "UtensilsCrossed",

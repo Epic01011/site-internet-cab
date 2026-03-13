@@ -44,7 +44,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-[#d4af37] shrink-0" />
-                <a href="tel:+33100000000" className="text-sm text-white/80 hover:text-[#d4af37] transition-colors">01 XX XX XX XX</a>
+                <a href="tel:+33148856101" className="text-sm text-white/80 hover:text-[#d4af37] transition-colors">01 48 85 61 01</a>
               </div>
               <div className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-[#d4af37] shrink-0" />
@@ -56,7 +56,7 @@ export default function Footer() {
               </div>
             </address>
             <div className="mt-5 flex gap-3">
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center hover:bg-[#d4af37] hover:text-[#1a2e4c] transition-colors" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/company/hayot-expertise" target="_blank" rel="noopener noreferrer" className="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center hover:bg-[#d4af37] hover:text-[#1a2e4c] transition-colors" aria-label="LinkedIn">
                 <Linkedin className="w-4 h-4" />
               </a>
             </div>

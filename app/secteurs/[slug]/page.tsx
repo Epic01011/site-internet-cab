@@ -110,9 +110,11 @@ export default function SecteurPage({ params }: { params: { slug: string } }) {
                   Prendre RDV
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white/10">
-                <Phone className="w-5 h-5 mr-2" />
-                01 XX XX XX XX
+              <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white/10" asChild>
+                <a href="tel:+33148856101">
+                  <Phone className="w-5 h-5 mr-2" />
+                  01 48 85 61 01
+                </a>
               </Button>
             </div>
           </div>

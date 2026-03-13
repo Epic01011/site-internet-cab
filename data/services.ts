@@ -205,7 +205,7 @@ Nous travaillons avec les meilleurs logiciels de paie :
 | PME | 6 à 20 | 40-60€/bulletin |
 | ETI | 20+ | Sur devis |
 
-📞 Audit social gratuit - Contactez-nous au 01 XX XX XX XX
+📞 Audit social gratuit - Contactez-nous au 01 48 85 61 01
     `,
     seoKeywords: ["gestion paie Paris", "cabinet paie Paris 8", "externalisation paie", "DSN Paris", "expert social Paris"],
     icon: "Users",
