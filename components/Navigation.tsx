@@ -34,11 +34,11 @@ export default function Navigation() {
             </span>
           </div>
           <div className="flex items-center gap-4">
-            <a href="tel:+33148856101" className="flex items-center gap-1.5 hover:text-[#d4af37] transition-colors">
+            <a href="tel:+33148856101" title="Appeler le cabinet Hayot Expertise" className="flex items-center gap-1.5 hover:text-[#d4af37] transition-colors">
               <Phone className="w-3.5 h-3.5" />
               01 48 85 61 01
             </a>
-            <Link href="/contact" className="bg-[#d4af37] text-[#1a2e4c] px-3 py-0.5 rounded text-xs font-semibold hover:bg-[#e8c95a] transition-colors">
+            <Link href="/contact" title="Prendre un rendez-vous gratuit au cabinet" className="bg-[#d4af37] text-[#1a2e4c] px-3 py-0.5 rounded text-xs font-semibold hover:bg-[#e8c95a] transition-colors">
               RDV Gratuit
             </Link>
           </div>
@@ -49,7 +49,7 @@ export default function Navigation() {
       <nav className="max-w-7xl mx-auto px-4" role="navigation" aria-label="Navigation principale">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 shrink-0">
+          <Link href="/" title="Retour à l'accueil - Hayot Expertise" className="flex items-center gap-2 shrink-0">
             <div className="w-9 h-9 bg-[#1a2e4c] rounded-lg flex items-center justify-center">
               <span className="text-[#d4af37] font-serif font-bold text-lg">H</span>
             </div>
@@ -66,8 +66,10 @@ export default function Navigation() {
               className="relative"
               onMouseEnter={() => handleMenuEnter('services')}
               onMouseLeave={handleMenuLeave}
+              aria-haspopup="true"
+              aria-expanded={activeMenu === 'services'}
             >
-              <button className="flex items-center gap-1 px-4 py-2 text-sm font-medium text-[#1a2e4c] hover:text-[#d4af37] transition-colors rounded-md hover:bg-gray-50">
+              <button aria-label="Menu Services" className="flex items-center gap-1 px-4 py-2 text-sm font-medium text-[#1a2e4c] hover:text-[#d4af37] transition-colors rounded-md hover:bg-gray-50">
                 Services
                 <ChevronDown className={`w-4 h-4 transition-transform ${activeMenu === 'services' ? 'rotate-180' : ''}`} />
               </button>
@@ -79,6 +81,7 @@ export default function Navigation() {
                       <Link
                         key={service.slug}
                         href={`/services/${service.slug}`}
+                        title={`En savoir plus sur notre service de ${service.title.toLowerCase()}`}
                         className="block py-2 px-3 rounded-lg hover:bg-[#1a2e4c]/5 transition-colors group"
                       >
                         <div className="font-medium text-[#1a2e4c] text-sm group-hover:text-[#d4af37] transition-colors">{service.title}</div>
@@ -89,7 +92,7 @@ export default function Navigation() {
                   <div className="bg-gradient-to-br from-[#1a2e4c] to-[#2a3e5c] rounded-xl p-4 text-white">
                     <div className="text-sm font-bold mb-2">Audit Gratuit</div>
                     <p className="text-xs text-white/80 mb-4">Obtenez une analyse de votre situation comptable et fiscale sans engagement.</p>
-                    <Link href="/contact" className="block text-center bg-[#d4af37] text-[#1a2e4c] py-2 px-4 rounded-lg text-sm font-semibold hover:bg-[#e8c95a] transition-colors">
+                    <Link href="/contact" title="Prendre rendez-vous avec un expert-comptable" className="block text-center bg-[#d4af37] text-[#1a2e4c] py-2 px-4 rounded-lg text-sm font-semibold hover:bg-[#e8c95a] transition-colors">
                       Prendre RDV
                     </Link>
                   </div>
@@ -102,8 +105,10 @@ export default function Navigation() {
               className="relative"
               onMouseEnter={() => handleMenuEnter('secteurs')}
               onMouseLeave={handleMenuLeave}
+              aria-haspopup="true"
+              aria-expanded={activeMenu === 'secteurs'}
             >
-              <button className="flex items-center gap-1 px-4 py-2 text-sm font-medium text-[#1a2e4c] hover:text-[#d4af37] transition-colors rounded-md hover:bg-gray-50">
+              <button aria-label="Menu Secteurs" className="flex items-center gap-1 px-4 py-2 text-sm font-medium text-[#1a2e4c] hover:text-[#d4af37] transition-colors rounded-md hover:bg-gray-50">
                 Secteurs
                 <ChevronDown className={`w-4 h-4 transition-transform ${activeMenu === 'secteurs' ? 'rotate-180' : ''}`} />
               </button>
@@ -115,6 +120,7 @@ export default function Navigation() {
                       <Link
                         key={secteur.slug}
                         href={`/secteurs/${secteur.slug}`}
+                        title={`Découvrir notre expertise pour le secteur de l'${secteur.title.toLowerCase()}`}
                         className="block py-2 px-3 rounded-lg hover:bg-[#1a2e4c]/5 transition-colors group"
                       >
                         <div className="font-medium text-[#1a2e4c] text-sm group-hover:text-[#d4af37] transition-colors">{secteur.title}</div>
@@ -131,8 +137,10 @@ export default function Navigation() {
               className="relative"
               onMouseEnter={() => handleMenuEnter('ressources')}
               onMouseLeave={handleMenuLeave}
+              aria-haspopup="true"
+              aria-expanded={activeMenu === 'ressources'}
             >
-              <button className="flex items-center gap-1 px-4 py-2 text-sm font-medium text-[#1a2e4c] hover:text-[#d4af37] transition-colors rounded-md hover:bg-gray-50">
+              <button aria-label="Menu Ressources" className="flex items-center gap-1 px-4 py-2 text-sm font-medium text-[#1a2e4c] hover:text-[#d4af37] transition-colors rounded-md hover:bg-gray-50">
                 Ressources
                 <ChevronDown className={`w-4 h-4 transition-transform ${activeMenu === 'ressources' ? 'rotate-180' : ''}`} />
               </button>
@@ -157,8 +165,10 @@ export default function Navigation() {
               className="relative"
               onMouseEnter={() => handleMenuEnter('blog')}
               onMouseLeave={handleMenuLeave}
+              aria-haspopup="true"
+              aria-expanded={activeMenu === 'blog'}
             >
-              <button className="flex items-center gap-1 px-4 py-2 text-sm font-medium text-[#1a2e4c] hover:text-[#d4af37] transition-colors rounded-md hover:bg-gray-50">
+              <button aria-label="Menu Blog" className="flex items-center gap-1 px-4 py-2 text-sm font-medium text-[#1a2e4c] hover:text-[#d4af37] transition-colors rounded-md hover:bg-gray-50">
                 Blog
                 <ChevronDown className={`w-4 h-4 transition-transform ${activeMenu === 'blog' ? 'rotate-180' : ''}`} />
               </button>
@@ -183,7 +193,7 @@ export default function Navigation() {
               )}
             </div>
 
-            <Link href="/contact" className="px-4 py-2 text-sm font-medium text-[#1a2e4c] hover:text-[#d4af37] transition-colors rounded-md hover:bg-gray-50">
+            <Link href="/contact" title="Nous contacter" className="px-4 py-2 text-sm font-medium text-[#1a2e4c] hover:text-[#d4af37] transition-colors rounded-md hover:bg-gray-50">
               Contact
             </Link>
           </div>
@@ -191,7 +201,7 @@ export default function Navigation() {
           {/* CTA + Mobile toggle */}
           <div className="flex items-center gap-3">
             <Button asChild className="hidden lg:flex bg-[#1a2e4c] hover:bg-[#2a3e5c] text-white" size="sm">
-              <Link href="/contact">Consultation Gratuite</Link>
+              <Link href="/contact" title="Programmer une consultation gratuite avec un expert-comptable">Consultation Gratuite</Link>
             </Button>
             <button
               className="lg:hidden p-2 rounded-md text-[#1a2e4c]"

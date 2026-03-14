@@ -25,6 +25,7 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: { canonical: 'https://hayot-expertise.fr' },
+  metadataBase: new URL('https://hayot-expertise.fr'),
 };
 
 const jsonLd = {

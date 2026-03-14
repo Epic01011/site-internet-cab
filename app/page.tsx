@@ -229,7 +229,7 @@ export default function HomePage() {
                     <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#d4af37] transition-colors">
                       <Icon className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="font-serif font-bold text-white text-lg leading-tight mb-2">{secteur.title}</h3>
+                    <div className="font-serif font-bold text-white text-lg leading-tight mb-2">{secteur.title}</div>
                     <p className="text-white/70 text-sm leading-relaxed flex-1 line-clamp-3">{secteur.description.slice(0, 100)}…</p>
                     <div className="flex items-center gap-1 mt-4 text-[#d4af37] text-sm font-medium">
                       Découvrir <ArrowRight className="w-4 h-4" />
@@ -256,7 +256,7 @@ export default function HomePage() {
                 <div className="w-14 h-14 bg-[#d4af37] rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="font-bold text-[#1a2e4c] text-lg">{step.step}</span>
                 </div>
-                <h3 className="font-serif font-bold text-white text-lg mb-2">{step.title}</h3>
+                <div className="font-serif font-bold text-white text-lg mb-2">{step.title}</div>
                 <p className="text-white/70 text-sm leading-relaxed">{step.desc}</p>
               </FadeInItem>
             ))}
@@ -291,9 +291,9 @@ export default function HomePage() {
                         {format(new Date(post.publishedDate), 'dd MMM yyyy', { locale: fr })}
                       </span>
                     </div>
-                    <h3 className="font-serif font-bold text-[#1a2e4c] text-lg leading-tight mb-3 group-hover:text-[#d4af37] transition-colors">
+                    <div className="font-serif font-bold text-[#1a2e4c] text-lg leading-tight mb-3 group-hover:text-[#d4af37] transition-colors">
                       {post.title}
-                    </h3>
+                    </div>
                     <p className="text-[#4a5568] text-sm leading-relaxed line-clamp-3">{post.excerpt}</p>
                     <div className="flex items-center gap-1 mt-4 text-[#d4af37] text-sm font-medium">
                       Lire la suite <ArrowRight className="w-4 h-4" />

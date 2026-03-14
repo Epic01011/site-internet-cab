@@ -68,7 +68,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {services.map((service) => (
                 <li key={service.slug}>
-                  <Link href={`/services/${service.slug}`} className="text-sm text-white/70 hover:text-[#d4af37] transition-colors">
+                  <Link href={`/services/${service.slug}`} title={service.title} className="text-sm text-white/70 hover:text-[#d4af37] transition-colors">
                     {service.title}
                   </Link>
                 </li>
@@ -82,7 +82,7 @@ export default function Footer() {
             <ul className="space-y-2 mb-6">
               {secteurs.map((secteur) => (
                 <li key={secteur.slug}>
-                  <Link href={`/secteurs/${secteur.slug}`} className="text-sm text-white/70 hover:text-[#d4af37] transition-colors">
+                  <Link href={`/secteurs/${secteur.slug}`} title={secteur.title} className="text-sm text-white/70 hover:text-[#d4af37] transition-colors">
                     {secteur.title}
                   </Link>
                 </li>
@@ -90,10 +90,10 @@ export default function Footer() {
             </ul>
             <h3 className="font-semibold text-[#d4af37] mb-4 text-sm uppercase tracking-wider">Ressources</h3>
             <ul className="space-y-2">
-              <li><Link href="/ressources" className="text-sm text-white/70 hover:text-[#d4af37] transition-colors">Simulateurs Fiscaux</Link></li>
-              <li><Link href="/ressources#faq" className="text-sm text-white/70 hover:text-[#d4af37] transition-colors">FAQ Expert-Comptable</Link></li>
-              <li><Link href="/blog" className="text-sm text-white/70 hover:text-[#d4af37] transition-colors">Blog & Actualités</Link></li>
-              <li><Link href="/contact" className="text-sm text-white/70 hover:text-[#d4af37] transition-colors">Prendre RDV</Link></li>
+              <li><Link href="/ressources" title="Accéder aux simulateurs fiscaux" className="text-sm text-white/70 hover:text-[#d4af37] transition-colors">Simulateurs Fiscaux</Link></li>
+              <li><Link href="/ressources#faq" title="Lire la FAQ expert-comptable" className="text-sm text-white/70 hover:text-[#d4af37] transition-colors">FAQ Expert-Comptable</Link></li>
+              <li><Link href="/blog" title="Lire nos articles de blog traitant de la comptabilité" className="text-sm text-white/70 hover:text-[#d4af37] transition-colors">Blog & Actualités</Link></li>
+              <li><Link href="/contact" title="Prendre rendez-vous" className="text-sm text-white/70 hover:text-[#d4af37] transition-colors">Prendre RDV</Link></li>
             </ul>
           </div>
 
@@ -103,8 +103,8 @@ export default function Footer() {
             <ul className="space-y-2">
               {topSeoPages.map((page) => (
                 <li key={page.href}>
-                  <Link href={page.href} className="text-sm text-white/70 hover:text-[#d4af37] transition-colors flex items-center gap-1.5">
-                    <ExternalLink className="w-3 h-3 opacity-50" />
+                  <Link href={page.href} title={`En savoir plus sur : ${page.label}`} className="text-sm text-white/70 hover:text-[#d4af37] transition-colors flex items-center gap-1.5">
+                    <ExternalLink className="w-3 h-3 opacity-50 text-[#d4af37]" />
                     {page.label}
                   </Link>
                 </li>
