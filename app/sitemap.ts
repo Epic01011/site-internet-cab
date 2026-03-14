@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 import { services } from '@/data/services';
 import { secteurs } from '@/data/secteurs';
-import { blogPosts, blogCategories } from '@/data/blog';
+import { blogPosts, blogCategories, slugifyCategory } from '@/data/blog';
 
 const BASE_URL = 'https://hayot-expertise.fr';
 
@@ -68,11 +68,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  const categoryPages: MetadataRoute.Sitemap = blogCategories.map((cat) => ({
-    url: `${BASE_URL}/blog/category/${encodeURIComponent(cat.toLowerCase())}`,
-    lastModified: now,
-    changeFrequency: 'weekly' as const,
-    priority: 0.75,
+  const categoryRoutes: MetadataRoute.Sitemap = blogCategories.map((cat) => ({
+    url: `${BASE_URL}/blog/category/${slugifyCategory(cat)}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly',
+    priority: 0.6,
   }));
 
   return [
@@ -80,6 +80,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...servicePages,
     ...secteurPages,
     ...blogPages,
-    ...categoryPages,
+    ...categoryRoutes,
   ];
 }

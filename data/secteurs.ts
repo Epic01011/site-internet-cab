@@ -480,5 +480,118 @@ Notre équipe connaît les réalités du terrain : nous accompagnons des brasser
       { label: "Bulletins de paie/mois", value: "200+" },
       { label: "Saving moyen/an", value: "8 000€" }
     ]
+  },
+  {
+    slug: "e-commerce",
+    title: "Expert-Comptable E-Commerce & Dropshipping Paris",
+    description: "Expert-comptable spécialisé E-commerce, Amazon FBA, Shopify, Dropshipping. Gestion de la TVA intracommunautaire (OSS), exports, et liaison des flux logiciels.",
+    content: `
+# Expert-Comptable E-Commerce Paris
+
+## Votre partenaire comptable E-Commerce et Dropshipping
+
+Hayot Expertise vous accompagne dans les spécificités comptables liées au **E-commerce**. Que vous utilisiez Shopify, Amazon FBA, ou un modèle dropshipping, la gestion de la TVA et les intégrations logicielles n'ont aucun secret pour nous.
+
+### Spécificités du secteur E-commerce
+
+#### La gestion de la TVA (Guichet unique OSS)
+Les ventes en ligne à des particuliers dans l'UE sont soumises à la TVA du pays de destination au-delà de 10 000 € de CA.
+- **Régime OSS (One Stop Shop)** : nous centralisons vos déclarations de TVA européennes sur une seule plateforme.
+- Ventes hors UE / Exports : facturation HT et justificatifs douaniers.
+
+#### Importation automatisée des flux
+Fini la saisie manuelle. Nos outils se connectent directement à vos plateformes (Shopify, Stripe, Amazon, PayPal, PrestaShop) pour injecter automatiquement les centaines de micro-transactions dans votre comptabilité.
+
+### Nos services
+
+1. **Dashboard temps réel** : Suivi des marges commerciales, ROI marketing (Facebook/Google Ads).
+2. **Audit des coûts logistiques** : Optimisation des frais Amazon FBA.
+3. **Création d'entreprise** : Montage optimisé pour les commerçants digitaux.
+    `,
+    seoKeywords: ["expert-comptable e-commerce", "comptable shopify", "TVA OSS", "comptable amazon FBA", "expert dropshipping Paris"],
+    icon: "ShoppingCart",
+    relatedServices: ["expertise-comptable-paris-8", "creation-entreprise-paris", "dashboard-financier"],
+    stats: [
+      { label: "Boutiques Shopify", value: "30+" },
+      { label: "Volume CA géré", value: "15M€" }
+    ]
+  },
+  {
+    slug: "btp-et-construction",
+    title: "Expert-Comptable BTP & Construction Paris",
+    description: "Accompagnement spécifique pour professionnels du bâtiment (BTP). Autoliquidation de TVA, gestion des sous-traitants, retenues de garantie, caisse congés payés.",
+    content: `
+# Expert-Comptable BTP & Construction Paris
+
+## Une maîtrise parfaite des enjeux du bâtiment
+
+Le secteur de la construction possède une législation sociale et fiscale très particulière que notre cabinet maîtrise parfaitement. Nous accompagnons artisans, PME du second-œuvre, et constructeurs.
+
+### Expertise Bâtiment & Travaux Publics
+
+#### Autoliquidation de la TVA en sous-traitance
+Si vous faites appel à un sous-traitant (ou êtes vous-même sous-traitant), la facturation doit se faire hors taxe, avec la mention "Autoliquidation de la TVA". Nous veillons à la conformité de vos factures et de votre liasse fiscale.
+
+#### Retenue de garantie (5%)
+Gestion comptable de la retenue de garantie légale (5%) : suivi des échéanciers de facturation, comptabilisation en créance client jusqu'à la réception définitive des travaux.
+
+#### Gestion sociale spécialisée BTP
+- Caisse de Congés Payés du Bâtiment (CIBTP)
+- Prime de panier, indemnités de trajet/transport
+- Intempéries et chômage partiel
+- Carte d'identification professionnelle (Carte BTP)
+
+### Nos engagements :
+
+- **Attestation de vigilance URSSAF** fournie rapidement
+- **Suivi de rentabilité par chantier** : analysez la marge brute projet par projet
+    `,
+    seoKeywords: ["expert-comptable BTP", "comptable bâtiment Paris", "autoliquidation TVA", "paie BTP", "comptable artisan", "gestion retenue garantie"],
+    icon: "HardHat",
+    relatedServices: ["social-paie-paris", "expertise-comptable-paris-8", "gestion-entreprise-paris"],
+    stats: [
+      { label: "Artisans & PME BTP", value: "65+" },
+      { label: "Paies BTP/mois", value: "300+" }
+    ]
+  },
+  {
+    slug: "le-role-de-l-expert-comptable",
+    title: "Le Rôle de l'Expert-Comptable",
+    description: "N/A",
+    content: `
+# Le Rôle de l'Expert-Comptable
+
+## Votre expert-comptable vous accompagne
+
+N/A
+
+### Pourquoi choisir Hayot Expertise ?
+
+Situé au **58 rue de Monceau, Paris 8ème**, notre cabinet d'expertise comptable vous offre un accompagnement personnalisé et des solutions sur-mesure.
+
+**Samuel HAYOT**, expert-comptable diplômé, et son équipe vous accompagnent dans toutes vos démarches avec une approche digitale et humaine.
+
+### Nos points forts
+
+- ✅ **Expertise reconnue** : Plus de 10 ans d'expérience
+- ✅ **Outils digitaux** : Pennylane, facturation électronique
+- ✅ **Proximité** : Cabinet situé dans le 8ème arrondissement de Paris
+- ✅ **Réactivité** : Réponse sous 24h
+
+### Contactez-nous
+
+📍 58 rue de Monceau, 75008 Paris
+📞 01 48 85 61 01
+📧 contact@hayot-expertise.fr
+
+**Prenez rendez-vous** pour un premier échange gratuit et sans engagement.
+    `,
+    seoKeywords: ["Le Rôle de l'ExpertComptable", "Le Rôle de l'ExpertComptable expert-comptable Paris", "N/A"],
+    icon: "Building",
+    relatedServices: ["expertise-comptable-paris-8"],
+    stats: [
+      { label: "Clients accompagnés", value: "100+" },
+      { label: "Satisfaction client", value: "98%" }
+    ]
   }
 ];

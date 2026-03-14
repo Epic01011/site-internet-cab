@@ -1,21 +1,21 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { blogPosts, blogCategories } from '@/data/blog';
+import { blogPosts, blogCategories, calculateReadingTime, slugifyCategory } from '@/data/blog';
 import Link from 'next/link';
-import { ArrowRight, Calendar, User } from 'lucide-react';
+import { ArrowRight, Calendar, User, Clock } from 'lucide-react';
 import { format } from 'date-fns';
 import { fr } from 'date-fns/locale';
 
 export async function generateStaticParams() {
   return blogCategories.map((cat) => ({
-    category: encodeURIComponent(cat.toLowerCase()),
+    category: slugifyCategory(cat),
   }));
 }
 
 export async function generateMetadata({ params }: { params: { category: string } }): Promise<Metadata> {
-  const categoryName = decodeURIComponent(params.category);
+  const categoryName = params.category;
   const displayName = blogCategories.find(
-    (c) => c.toLowerCase() === categoryName
+    (c) => slugifyCategory(c) === categoryName
   );
 
   if (!displayName) {
@@ -29,9 +29,9 @@ export async function generateMetadata({ params }: { params: { category: string 
 }
 
 export default function BlogCategoryPage({ params }: { params: { category: string } }) {
-  const categoryName = decodeURIComponent(params.category);
+  const categoryName = params.category;
   const displayName = blogCategories.find(
-    (c) => c.toLowerCase() === categoryName
+    (c) => slugifyCategory(c) === categoryName
   );
 
   if (!displayName) {
@@ -39,7 +39,7 @@ export default function BlogCategoryPage({ params }: { params: { category: strin
   }
 
   const posts = blogPosts.filter(
-    (p) => p.category.toLowerCase() === categoryName
+    (p) => slugifyCategory(p.category) === categoryName
   );
 
   return (
@@ -70,7 +70,7 @@ export default function BlogCategoryPage({ params }: { params: { category: strin
           {blogCategories.map((cat) => (
             <Link
               key={cat}
-              href={`/blog/category/${encodeURIComponent(cat.toLowerCase())}`}
+              href={`/blog/category/${slugifyCategory(cat)}`}
               className={`shrink-0 px-4 py-1.5 rounded-full text-sm font-medium transition-colors ${cat === displayName ? 'bg-[#1a2e4c] text-white' : 'bg-white border border-gray-200 text-[#1a2e4c] hover:bg-[#1a2e4c] hover:text-white'}`}
             >
               {cat}
@@ -93,13 +93,17 @@ export default function BlogCategoryPage({ params }: { params: { category: strin
               <article key={post.slug}>
                 <Link href={`/blog/${post.slug}`}>
                   <div className="bg-[#f7fafc] rounded-xl p-6 hover:shadow-lg transition-all duration-300 group">
-                    <div className="flex items-center gap-3 mb-4">
+                    <div className="flex flex-wrap items-center gap-3 mb-4">
                       <span className="px-3 py-1 bg-[#d4af37]/10 text-[#d4af37] text-xs font-semibold rounded-full">
                         {post.category}
                       </span>
                       <span className="flex items-center gap-1.5 text-xs text-[#4a5568]">
                         <Calendar className="w-3.5 h-3.5" />
                         {format(new Date(post.publishedDate), 'dd MMMM yyyy', { locale: fr })}
+                      </span>
+                      <span className="flex items-center gap-1.5 text-xs text-[#4a5568]">
+                        <Clock className="w-3.5 h-3.5" />
+                        {post.readingTime || calculateReadingTime(post.content)} min
                       </span>
                     </div>
                     <h2 className="text-xl font-serif font-bold text-[#1a2e4c] leading-tight mb-3 group-hover:text-[#d4af37] transition-colors">

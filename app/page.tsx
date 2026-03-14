@@ -5,6 +5,8 @@ import { blogPosts } from '@/data/blog';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Simulateur from '@/components/Simulateur';
+import AnimatedCounter from '@/components/AnimatedCounter';
+import { FadeInStagger, FadeInItem } from '@/components/FadeIn';
 import {
   ArrowRight, Calendar, CheckCircle, Star, MapPin, Phone, Users, Award, Clock, TrendingUp,
   Calculator, Building2, Scale, Briefcase, Home, Rocket
@@ -39,7 +41,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-white">
       {/* ── HERO ─────────────────────────────────────── */}
-      <section className="relative bg-gradient-to-br from-[#1a2e4c] via-[#1e3458] to-[#0f1e33] text-white overflow-hidden">
+      <section className="relative bg-gradient-to-br from-[#1a2e4c] via-[#1e3458] to-[#0f1e33] bg-[length:200%_200%] animate-gradient text-white overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 right-20 w-96 h-96 bg-[#d4af37] rounded-full blur-3xl" />
@@ -109,7 +111,7 @@ export default function HomePage() {
                         <Icon className="w-4 h-4 text-[#d4af37]" />
                       </div>
                       <div>
-                        <span className="font-bold text-white">{value}</span>
+                        <span className="font-bold text-white"><AnimatedCounter value={value} /></span>
                         <span className="text-white/60 text-sm ml-2">{label}</span>
                       </div>
                     </div>
@@ -130,19 +132,19 @@ export default function HomePage() {
       {/* ── TRUST BAR ────────────────────────────────── */}
       <section className="bg-[#f7fafc] border-y border-gray-200">
         <div className="max-w-7xl mx-auto px-4 py-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <FadeInStagger className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {trustItems.map(({ icon: Icon, value, label }) => (
-              <div key={label} className="text-center">
+              <FadeInItem key={label} className="text-center">
                 <div className="flex justify-center mb-2">
                   <div className="w-12 h-12 bg-[#1a2e4c]/10 rounded-xl flex items-center justify-center">
                     <Icon className="w-6 h-6 text-[#1a2e4c]" />
                   </div>
                 </div>
-                <div className="text-3xl font-bold text-[#d4af37]">{value}</div>
+                <div className="text-3xl font-bold text-[#d4af37]"><AnimatedCounter value={value} /></div>
                 <div className="text-sm text-[#4a5568] font-medium mt-1">{label}</div>
-              </div>
+              </FadeInItem>
             ))}
-          </div>
+          </FadeInStagger>
         </div>
       </section>
 
@@ -157,30 +159,32 @@ export default function HomePage() {
             Un accompagnement global et sur-mesure pour toutes les dimensions comptables, fiscales et juridiques de votre activité.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <FadeInStagger className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {featuredServices.map((service) => {
             const Icon = iconMap[service.icon] || Calculator;
             return (
-              <Link key={service.slug} href={`/services/${service.slug}`}>
-                <Card className="h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-gray-100 group cursor-pointer">
-                  <CardHeader className="pb-3">
-                    <div className="w-12 h-12 bg-[#1a2e4c]/10 rounded-xl flex items-center justify-center mb-3 group-hover:bg-[#1a2e4c] transition-colors">
-                      <Icon className="w-6 h-6 text-[#1a2e4c] group-hover:text-white transition-colors" />
-                    </div>
-                    <span className="text-xs font-medium text-[#d4af37] uppercase tracking-wide">{service.category}</span>
-                    <CardTitle className="text-[#1a2e4c] font-serif text-lg leading-snug">{service.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-[#4a5568] text-sm leading-relaxed line-clamp-3">{service.description}</p>
-                    <div className="flex items-center gap-1 mt-4 text-[#d4af37] text-sm font-medium group-hover:gap-2 transition-all">
-                      En savoir plus <ArrowRight className="w-4 h-4" />
-                    </div>
-                  </CardContent>
-                </Card>
-              </Link>
+              <FadeInItem key={service.slug} className="h-full">
+                <Link href={`/services/${service.slug}`} className="block h-full">
+                  <Card className="h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-gray-100 group cursor-pointer">
+                    <CardHeader className="pb-3">
+                      <div className="w-12 h-12 bg-[#1a2e4c]/10 rounded-xl flex items-center justify-center mb-3 group-hover:bg-[#1a2e4c] transition-colors">
+                        <Icon className="w-6 h-6 text-[#1a2e4c] group-hover:text-white transition-colors" />
+                      </div>
+                      <span className="text-xs font-medium text-[#d4af37] uppercase tracking-wide">{service.category}</span>
+                      <CardTitle className="text-[#1a2e4c] font-serif text-lg leading-snug">{service.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-[#4a5568] text-sm leading-relaxed line-clamp-3">{service.description}</p>
+                      <div className="flex items-center gap-1 mt-4 text-[#d4af37] text-sm font-medium group-hover:gap-2 transition-all">
+                        En savoir plus <ArrowRight className="w-4 h-4" />
+                      </div>
+                    </CardContent>
+                  </Card>
+                </Link>
+              </FadeInItem>
             );
           })}
-        </div>
+        </FadeInStagger>
         <div className="text-center mt-10">
           <Button asChild variant="outline" className="border-[#1a2e4c] text-[#1a2e4c] hover:bg-[#1a2e4c] hover:text-white">
             <Link href="/services/expertise-comptable-paris-8">Tous nos services <ArrowRight className="w-4 h-4 ml-2" /></Link>
@@ -215,25 +219,27 @@ export default function HomePage() {
             Une maîtrise approfondie des enjeux comptables et fiscaux spécifiques à votre secteur.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <FadeInStagger className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {featuredSecteurs.map((secteur) => {
             const Icon = (LucideIcons as any)[secteur.icon] || Building2;
             return (
-              <Link key={secteur.slug} href={`/secteurs/${secteur.slug}`}>
-                <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-[#1a2e4c] to-[#2a3e5c] p-6 text-white h-full min-h-[200px] flex flex-col hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer group">
-                  <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#d4af37] transition-colors">
-                    <Icon className="w-6 h-6 text-white" />
+              <FadeInItem key={secteur.slug} className="h-full">
+                <Link href={`/secteurs/${secteur.slug}`} className="block h-full">
+                  <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-[#1a2e4c] to-[#2a3e5c] p-6 text-white h-full min-h-[200px] flex flex-col hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer group">
+                    <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#d4af37] transition-colors">
+                      <Icon className="w-6 h-6 text-white" />
+                    </div>
+                    <h3 className="font-serif font-bold text-white text-lg leading-tight mb-2">{secteur.title}</h3>
+                    <p className="text-white/70 text-sm leading-relaxed flex-1 line-clamp-3">{secteur.description.slice(0, 100)}…</p>
+                    <div className="flex items-center gap-1 mt-4 text-[#d4af37] text-sm font-medium">
+                      Découvrir <ArrowRight className="w-4 h-4" />
+                    </div>
                   </div>
-                  <h3 className="font-serif font-bold text-white text-lg leading-tight mb-2">{secteur.title}</h3>
-                  <p className="text-white/70 text-sm leading-relaxed flex-1 line-clamp-3">{secteur.description.slice(0, 100)}…</p>
-                  <div className="flex items-center gap-1 mt-4 text-[#d4af37] text-sm font-medium">
-                    Découvrir <ArrowRight className="w-4 h-4" />
-                  </div>
-                </div>
-              </Link>
+                </Link>
+              </FadeInItem>
             );
           })}
-        </div>
+        </FadeInStagger>
       </section>
 
       {/* ── PROCESS ──────────────────────────────────── */}
@@ -244,17 +250,17 @@ export default function HomePage() {
             <h2 className="text-3xl md:text-4xl font-serif font-bold mt-2 mb-4">Comment nous travaillons</h2>
             <p className="text-white/70 max-w-2xl mx-auto">Un processus clair et transparent pour un accompagnement optimal.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <FadeInStagger className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {processSteps.map((step) => (
-              <div key={step.step} className="text-center">
+              <FadeInItem key={step.step} className="text-center">
                 <div className="w-14 h-14 bg-[#d4af37] rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="font-bold text-[#1a2e4c] text-lg">{step.step}</span>
                 </div>
                 <h3 className="font-serif font-bold text-white text-lg mb-2">{step.title}</h3>
                 <p className="text-white/70 text-sm leading-relaxed">{step.desc}</p>
-              </div>
+              </FadeInItem>
             ))}
-          </div>
+          </FadeInStagger>
         </div>
       </section>
 
@@ -272,10 +278,10 @@ export default function HomePage() {
               <Link href="/blog">Tous les articles <ArrowRight className="w-4 h-4 ml-2" /></Link>
             </Button>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <FadeInStagger className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {recentPosts.map((post) => (
-              <article key={post.slug} className="group">
-                <Link href={`/blog/${post.slug}`}>
+              <FadeInItem key={post.slug} className="group h-full">
+                <Link href={`/blog/${post.slug}`} className="block h-full">
                   <div className="bg-[#f7fafc] rounded-xl p-6 h-full hover:shadow-md transition-all duration-300 hover:-translate-y-1">
                     <div className="flex items-center gap-2 mb-4">
                       <span className="px-2.5 py-1 bg-[#d4af37]/10 text-[#d4af37] text-xs font-semibold rounded-full">
@@ -294,9 +300,9 @@ export default function HomePage() {
                     </div>
                   </div>
                 </Link>
-              </article>
+              </FadeInItem>
             ))}
-          </div>
+          </FadeInStagger>
         </section>
       )}
 

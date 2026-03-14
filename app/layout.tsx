@@ -2,6 +2,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import MobileStickyBar from '@/components/MobileStickyBar';
 
 export const metadata: Metadata = {
   title: 'Hayot Expertise - Expert-Comptable Paris 8ème | Cabinet Monceau',
@@ -88,6 +89,7 @@ export default function RootLayout({
         <Navigation />
         <main>{children}</main>
         <Footer />
+        <MobileStickyBar />
       </body>
     </html>
   );

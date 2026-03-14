@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
-import { blogPosts, blogCategories } from '@/data/blog';
+import { blogPosts, blogCategories, calculateReadingTime, slugifyCategory } from '@/data/blog';
 import Link from 'next/link';
-import { ArrowRight, Calendar, User, Search } from 'lucide-react';
+import { ArrowRight, Calendar, User, Search, Clock } from 'lucide-react';
 import { format } from 'date-fns';
 import { fr } from 'date-fns/locale';
 
@@ -43,7 +43,7 @@ export default function BlogPage() {
           {blogCategories.map((cat) => (
             <Link
               key={cat}
-              href={`/blog/category/${encodeURIComponent(cat.toLowerCase())}`}
+              href={`/blog/category/${slugifyCategory(cat)}`}
               className="shrink-0 px-4 py-1.5 rounded-full text-sm font-medium bg-white border border-gray-200 text-[#1a2e4c] hover:bg-[#1a2e4c] hover:text-white transition-colors"
             >
               {cat}
@@ -66,13 +66,17 @@ export default function BlogPage() {
                 <Link href={`/blog/${post.slug}`}>
                   <div className={`bg-[#f7fafc] rounded-xl p-6 md:p-8 hover:shadow-lg transition-all duration-300 group ${index === 0 ? 'md:flex md:gap-8 items-start' : ''}`}>
                     <div className={index === 0 ? 'flex-1' : ''}>
-                      <div className="flex items-center gap-3 mb-4">
+                      <div className="flex flex-wrap items-center gap-3 mb-4">
                         <span className="px-3 py-1 bg-[#d4af37]/10 text-[#d4af37] text-xs font-semibold rounded-full">
                           {post.category}
                         </span>
                         <span className="flex items-center gap-1.5 text-xs text-[#4a5568]">
                           <Calendar className="w-3.5 h-3.5" />
                           {format(new Date(post.publishedDate), 'dd MMMM yyyy', { locale: fr })}
+                        </span>
+                        <span className="flex items-center gap-1.5 text-xs text-[#4a5568]">
+                          <Clock className="w-3.5 h-3.5" />
+                          {post.readingTime || calculateReadingTime(post.content)} min
                         </span>
                       </div>
                       <h2 className={`font-serif font-bold text-[#1a2e4c] leading-tight mb-3 group-hover:text-[#d4af37] transition-colors ${index === 0 ? 'text-2xl md:text-3xl' : 'text-xl'}`}>

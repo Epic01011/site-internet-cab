@@ -9,6 +9,21 @@ export interface BlogPost {
   seoKeywords: string[];
   relatedPosts: string[];
   relatedServices: string[];
+  readingTime?: number;
+}
+
+export function calculateReadingTime(content: string): number {
+  const wordsPerMinute = 200;
+  const noOfWords = content.trim().split(/\s+/).length;
+  return Math.max(1, Math.ceil(noOfWords / wordsPerMinute));
+}
+
+export function slugifyCategory(category: string): string {
+  return category
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/\s+/g, '-');
 }
 
 export const blogPosts: BlogPost[] = [

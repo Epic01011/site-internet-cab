@@ -1,13 +1,13 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { blogPosts } from '@/data/blog';
+import { blogPosts, calculateReadingTime, slugifyCategory } from '@/data/blog';
 import { services } from '@/data/services';
 import MarkdownContent from '@/components/MarkdownContent';
 import Breadcrumb from '@/components/Breadcrumb';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import Link from 'next/link';
-import { ArrowRight, Calendar, User } from 'lucide-react';
+import { ArrowRight, Calendar, User, Clock } from 'lucide-react';
 import { format } from 'date-fns';
 import { fr } from 'date-fns/locale';
 
@@ -55,24 +55,58 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
     post.relatedServices.includes(s.slug)
   );
 
+  const readingTime = post.readingTime || calculateReadingTime(post.content);
+
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.title,
+    description: post.excerpt,
+    author: {
+      '@type': 'Person',
+      name: post.author,
+    },
+    datePublished: post.publishedDate,
+    publisher: {
+      '@type': 'Organization',
+      name: 'Hayot Expertise',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://hayot-expertise.fr/logo.png'
+      }
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `https://hayot-expertise.fr/blog/${post.slug}`,
+    },
+  };
+
   return (
     <div className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <article className="max-w-4xl mx-auto px-4 py-16">
         <Breadcrumb
           items={[
             { label: 'Blog', href: '/blog' },
-            { label: post.category, href: `/blog/category/${encodeURIComponent(post.category.toLowerCase())}` },
+            { label: post.category, href: `/blog/category/${slugifyCategory(post.category)}` },
             { label: post.title },
           ]}
           className="text-[#4a5568] mb-8"
         />
         <div className="mb-8">
-          <div className="flex items-center gap-3 mb-4">
+          <div className="flex flex-wrap items-center gap-3 mb-4">
             <span className="px-3 py-1 bg-[#d4af37]/10 text-[#d4af37] text-sm font-medium rounded-full">
               {post.category}
             </span>
             <span className="text-sm text-[#4a5568]">
               {format(new Date(post.publishedDate), 'dd MMMM yyyy', { locale: fr })}
+            </span>
+            <span className="text-sm text-[#4a5568] flex items-center gap-1.5">
+              <Clock className="w-4 h-4" />
+              {readingTime} min de lecture
             </span>
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-[#1a2e4c] mb-4 font-serif leading-tight">

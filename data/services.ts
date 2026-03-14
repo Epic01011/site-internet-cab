@@ -328,5 +328,81 @@ Nous gérons plus de 150 dossiers LMNP. Notre expertise immobilière couvre : LM
     icon: "Home",
     relatedServices: ["expertise-comptable-paris-8", "fiscalite-holding-paris"],
     relatedSecteurs: ["immobilier-sci-lmnp"]
+  },
+  {
+    slug: "les-differents-types-de-management",
+    title: "Les Différents Types de Management :",
+    category: "Conseil",
+    description: "Découvrez les différents types de management, leurs caractéristiques, avantages et inconvénients. Apprenez à adapter votre style de management pour optimiser la performance et la motivation de votre équipe.",
+    content: `
+# Les Différents Types de Management :
+
+## Votre expert-comptable vous accompagne
+
+Découvrez les différents types de management, leurs caractéristiques, avantages et inconvénients. Apprenez à adapter votre style de management pour optimiser la performance et la motivation de votre équipe.
+
+### Pourquoi choisir Hayot Expertise ?
+
+Situé au **58 rue de Monceau, Paris 8ème**, notre cabinet d'expertise comptable vous offre un accompagnement personnalisé et des solutions sur-mesure.
+
+**Samuel HAYOT**, expert-comptable diplômé, et son équipe vous accompagnent dans toutes vos démarches avec une approche digitale et humaine.
+
+### Nos points forts
+
+- ✅ **Expertise reconnue** : Plus de 10 ans d'expérience
+- ✅ **Outils digitaux** : Pennylane, facturation électronique
+- ✅ **Proximité** : Cabinet situé dans le 8ème arrondissement de Paris
+- ✅ **Réactivité** : Réponse sous 24h
+
+### Contactez-nous
+
+📍 58 rue de Monceau, 75008 Paris
+📞 01 48 85 61 01
+📧 contact@hayot-expertise.fr
+
+**Prenez rendez-vous** pour un premier échange gratuit et sans engagement.
+    `,
+    seoKeywords: ["Les Différents Types de Management", "Les Différents Types de Management expert-comptable Paris", "Découvrez les différents types de management, leurs caractéristiques, avantages et inconvénients. Ap"],
+    icon: "Lightbulb",
+    relatedServices: ["expertise-comptable-paris-8"],
+    relatedSecteurs: []
+  },
+  {
+    slug: "obligation-rse",
+    title: "Obligation RSE",
+    category: "Social",
+    description: "La Responsabilité Sociale des Entreprises (RSE) désigne la prise en compte par les entreprises, de manière volontaire, des enjeux environnementaux, sociaux et économiques dans leurs activités et dans leurs interactions avec leurs parties prenantes. E",
+    content: `
+# Obligation RSE
+
+## Votre expert-comptable vous accompagne
+
+La Responsabilité Sociale des Entreprises (RSE) désigne la prise en compte par les entreprises, de manière volontaire, des enjeux environnementaux, sociaux et économiques dans leurs activités et dans leurs interactions avec leurs parties prenantes. En France, certaines obligations légales en matière
+
+### Pourquoi choisir Hayot Expertise ?
+
+Situé au **58 rue de Monceau, Paris 8ème**, notre cabinet d'expertise comptable vous offre un accompagnement personnalisé et des solutions sur-mesure.
+
+**Samuel HAYOT**, expert-comptable diplômé, et son équipe vous accompagnent dans toutes vos démarches avec une approche digitale et humaine.
+
+### Nos points forts
+
+- ✅ **Expertise reconnue** : Plus de 10 ans d'expérience
+- ✅ **Outils digitaux** : Pennylane, facturation électronique
+- ✅ **Proximité** : Cabinet situé dans le 8ème arrondissement de Paris
+- ✅ **Réactivité** : Réponse sous 24h
+
+### Contactez-nous
+
+📍 58 rue de Monceau, 75008 Paris
+📞 01 48 85 61 01
+📧 contact@hayot-expertise.fr
+
+**Prenez rendez-vous** pour un premier échange gratuit et sans engagement.
+    `,
+    seoKeywords: ["Obligation RSE", "Obligation RSE expert-comptable Paris", "La Responsabilité Sociale des Entreprises (RSE) désigne la prise en compte par les entreprises, de m"],
+    icon: "Users",
+    relatedServices: ["expertise-comptable-paris-8"],
+    relatedSecteurs: []
   }
 ];

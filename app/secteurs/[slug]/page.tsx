@@ -50,8 +50,32 @@ export default function SecteurPage({ params }: { params: { slug: string } }) {
     secteur.relatedServices.includes(s.slug)
   );
 
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: secteur.title,
+    description: secteur.description,
+    provider: {
+      '@type': 'AccountingService',
+      name: 'Hayot Expertise',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '58 rue de Monceau',
+        addressLocality: 'Paris',
+        postalCode: '75008',
+        addressCountry: 'FR'
+      }
+    },
+    areaServed: 'Paris',
+    url: `https://hayot-expertise.fr/secteurs/${secteur.slug}`
+  };
+
   return (
     <div className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <div className="bg-gradient-to-br from-[#1a2e4c] to-[#2a3e5c] text-white py-16">
         <div className="max-w-5xl mx-auto px-4">
           <Breadcrumb

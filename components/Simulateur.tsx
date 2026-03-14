@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { Calculator, TrendingUp, TrendingDown, Mail, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Slider } from '@/components/ui/slider';
 import Link from 'next/link';
 
 type Mode = 'dividendes' | 'statut';
@@ -96,17 +97,16 @@ export default function Simulateur() {
                 <label className="block text-sm font-semibold text-[#1a2e4c] mb-2">
                   Résultat de la société
                 </label>
-                <div className="relative">
-                  <input
-                    type="range"
+                <div className="relative pt-2 pb-6">
+                  <Slider
                     min={20000}
                     max={500000}
                     step={5000}
-                    value={revenue}
-                    onChange={(e) => setRevenue(Number(e.target.value))}
-                    className="w-full accent-[#1a2e4c]"
+                    value={[revenue]}
+                    onValueChange={([v]) => setRevenue(v)}
+                    className="w-full [&_[data-radix-slider-range]]:bg-[#1a2e4c] [&_[role=slider]]:border-[#1a2e4c] [&_[role=slider]]:w-5 [&_[role=slider]]:h-5 cursor-pointer"
                   />
-                  <div className="flex justify-between text-xs text-[#4a5568] mt-1">
+                  <div className="flex justify-between text-xs text-[#4a5568] mt-4 absolute w-full bottom-0">
                     <span>20 000 €</span>
                     <span className="font-bold text-[#1a2e4c]">{fmt(revenue)}</span>
                     <span>500 000 €</span>
@@ -117,17 +117,16 @@ export default function Simulateur() {
                 <label className="block text-sm font-semibold text-[#1a2e4c] mb-2">
                   Part en dividendes
                 </label>
-                <div className="relative">
-                  <input
-                    type="range"
+                <div className="relative pt-2 pb-6">
+                  <Slider
                     min={0}
                     max={Math.min(revenue, 200000)}
                     step={5000}
-                    value={partDiv}
-                    onChange={(e) => setPartDiv(Number(e.target.value))}
-                    className="w-full accent-[#d4af37]"
+                    value={[partDiv]}
+                    onValueChange={([v]) => setPartDiv(v)}
+                    className="w-full [&_[data-radix-slider-range]]:bg-[#d4af37] [&_[role=slider]]:border-[#d4af37] [&_[role=slider]]:w-5 [&_[role=slider]]:h-5 cursor-pointer"
                   />
-                  <div className="flex justify-between text-xs text-[#4a5568] mt-1">
+                  <div className="flex justify-between text-xs text-[#4a5568] mt-4 absolute w-full bottom-0">
                     <span>0 €</span>
                     <span className="font-bold text-[#d4af37]">{fmt(partDiv)}</span>
                     <span>{fmt(Math.min(revenue, 200000))}</span>
